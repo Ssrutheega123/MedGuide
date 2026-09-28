@@ -172,6 +172,12 @@ def delete_session(session_id: str):
 # ---------- Serve Frontend in Combined Deployment ----------
 from fastapi.staticfiles import StaticFiles
 
-frontend_dist = os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend", "dist")
-if os.path.exists(frontend_dist):
-    app.mount("/", StaticFiles(directory=frontend_dist, html=True), name="frontend")
+frontend_dist_options = [
+    os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend", "dist"),
+    "/home/site/wwwroot/frontend/dist",
+    "frontend/dist",
+]
+for dist_path in frontend_dist_options:
+    if os.path.exists(dist_path):
+        app.mount("/", StaticFiles(directory=dist_path, html=True), name="frontend")
+        break
