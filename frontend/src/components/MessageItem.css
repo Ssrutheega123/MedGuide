@@ -1,0 +1,126 @@
+.message-row {
+  display: flex;
+  gap: 14px;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.message-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.message-avatar.user {
+  background-color: #0f172a;
+  color: white;
+}
+
+.message-avatar.assistant {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid #bae6fd;
+}
+
+.message-content-wrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.message-author {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-subtle);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+}
+
+.copy-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-main);
+}
+
+.message-body {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-main);
+  word-break: break-word;
+}
+
+.message-body p {
+  margin-bottom: 8px;
+}
+
+.message-body p:last-child {
+  margin-bottom: 0;
+}
+
+.message-body ul, .message-body ol {
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.message-body li {
+  margin-bottom: 4px;
+}
+
+.message-body strong {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.citations-badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border-light);
+}
+
+.citation-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  color: var(--primary-text);
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.citation-pill:hover {
+  background-color: #e0f2fe;
+  border-color: #7dd3fc;
+  transform: translateY(-1px);
+}
